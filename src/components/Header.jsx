@@ -5,13 +5,15 @@ import themeLight from "../assets/images/icon-sun.svg"
 import { useState } from "react"
 
 export const Header = () => {
-
+  
+ 
   const [isThemeDark, setIsThemeDark] = useState (false);
-
+    
   const handleClick = ()=>{
     
     const isChangetoDarkMode = document.documentElement.classList.toggle('dark');
     setIsThemeDark(isChangetoDarkMode);
+    
 
   }
   return (
