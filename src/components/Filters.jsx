@@ -1,8 +1,10 @@
-import { useEffect } from "react"
+
 import { Buttons } from "./Buttons"
-import data from "../data/data.json"
+
+
 
 export const Filters = () => {
+  
   
   return (
     <div className="mb-6 md:flex justify-between">

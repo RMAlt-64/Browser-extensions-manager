@@ -5,14 +5,19 @@ import themeLight from "../assets/images/icon-sun.svg"
 import { useState } from "react"
 
 export const Header = () => {
+  const savedTheme = localStorage.getItem('theme');
   
+  if (JSON.parse(savedTheme)) {
+    document.documentElement.classList.add('dark')
+  }
  
-  const [isThemeDark, setIsThemeDark] = useState (false);
+  const [isThemeDark, setIsThemeDark] = useState (JSON.parse(savedTheme));
     
   const handleClick = ()=>{
     
     const isChangetoDarkMode = document.documentElement.classList.toggle('dark');
     setIsThemeDark(isChangetoDarkMode);
+    localStorage.setItem('theme', isChangetoDarkMode );
     
 
   }
