@@ -3,12 +3,12 @@ import { useAppContext } from "../context/AppContext";
 
 
 
-export const Buttons = ({ children, textSmall}) => {
-   
+export const Buttons = ({ children, textSmall, handleClick}) => {
+
     const { setFilter } = useAppContext();
     return (
             <div>
-                <button onClick={() => setFilter(children)} className={`border-1
+                <button onClick={() => {setFilter(children);if (handleClick) handleClick(children)}} className={`border-1
                 px-5
                 py-2
                 bg-Neutral-0

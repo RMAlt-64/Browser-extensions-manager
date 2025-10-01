@@ -11,9 +11,9 @@ export const CardsContainer = () => {
   const { extensions, setExtensions } = useAppContext();
   
   const filteredData =
-    filter === "All"
+    (filter === "All"
       ? extensions
-      : extensions.filter((item) => item.isActive.toString() === (filter === "Active" ? "true" : "false"));
+      : extensions.filter((item) => item.isActive.toString() === (filter === "Active" ? "true" : "false")));
   
 
   return (
